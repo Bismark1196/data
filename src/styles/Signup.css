@@ -1,0 +1,64 @@
+/* PWA Install Popup Styles */
+#pwa-install-popup {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 4%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.pwa-popup-content {
+  background: transparent;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px transparent;
+}
+
+.pwa-popup-content img {
+  width: 150px;
+  height: 150px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.pwa-popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.pwa-popup-buttons button {
+  flex: 1;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pwa-install-btn {
+  background: linear-gradient(135deg, #00ff59, #206f83);
+  color: white;
+}
+
+.pwa-cancel-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.gif-container img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Add or import styles for navbar, form, footer, etc., as needed from main.css or shared.css */

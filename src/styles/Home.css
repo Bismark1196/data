@@ -1,0 +1,315 @@
+/* ========== BASE STYLES ========== */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #ffffff; */
+  color: #111;
+  line-height: 1.6;
+}
+
+/* ========== SECTION ========== */
+.section {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+.section h2 {
+  color: #111;
+  margin-bottom: 10px;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: linear-gradient(135deg, #eaeaea, #dbfff6);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branding .logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.branding h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.branding p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: #111;
+}
+
+h2 {
+  color: #000000;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+/* ========== CTA BUTTON ========== */
+.cta-button {
+  background: linear-gradient(to right, #00a651, #00764c);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 166, 80, 0.4);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #008f45;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.cta-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========== BENEFITS ========== */
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.benefit {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  width: 260px;
+  border-radius: 16px;
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.benefit:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.benefit h3 {
+  color: #007e3d;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.benefit p {
+  color: #333333;
+  font-size: 1rem;
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials {
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.testimonial {
+  background-color: #fafafa;
+  border-left: 5px solid #00a651;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial p {
+  color: #333333;
+}
+
+.testimonial strong {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: #444;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit,
+.testimonial {
+  animation: fadeUp 0.5s ease-in-out;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet: Up to 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit {
+    width: 90%;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 200px;
+    border-radius: 12px;
+  }
+}
+
+/* Phone: Up to 480px */
+@media (max-width: 480px) {
+  .section {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p,
+  .benefit p,
+  .testimonial {
+    font-size: 0.95rem;
+  }
+
+  .benefits {
+    gap: 15px;
+  }
+
+  .benefit {
+    padding: 16px;
+    width: 95%;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+
+  .testimonial {
+    padding: 15px;
+  }
+}
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(
+    to right,
+    #2e8b57,
+    #3cb371
+  ); /* Stylish green gradient */
+  color: white;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.branding .logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.branding h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.branding p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}

@@ -1,0 +1,198 @@
+/* Global Styles & Background */
+body {
+  font-family: "Arial", sans-serif;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.623), rgba(255, 255, 255, 0.61)),
+    url("/bmage.jpg") no-repeat center center fixed;
+  background-size: cover; /* Ensures the image fully covers the screen */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-align: center;
+}
+
+/* Main Container Layout */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  gap: 0;
+  padding: 90px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* Left Content */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.left-content h1 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 1px;
+  font-weight: bolder;
+}
+
+.left-content p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Form Styling */
+.form-wrapper {
+  background: linear-gradient(135deg, #ffffff, #206f83);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-wrapper h1 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  color: #000000;
+  text-align: center;
+  font-weight: 750;
+}
+
+.form-wrapper h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: rgb(108, 108, 108);
+  font-size: 16px;
+  transition:
+    border-color 0.3s,
+    background-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #209bde;
+  outline: none;
+  background-color: #ffffff;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #209bde, #000dff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition:
+    background 0.3s,
+    transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #209bde, #1c1f99);
+  transform: scale(1.02);
+}
+
+.note {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #ff000071;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+}
+
+.disclaimer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .left-content {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 30px 15px;
+  }
+
+  .left-content {
+    display: none;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-wrapper {
+    padding: 20px 15px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .form-wrapper h1 {
+    font-size: 22px;
+  }
+
+  .form-wrapper h3 {
+    font-size: 16px;
+  }
+}

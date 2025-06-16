@@ -1,0 +1,230 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #0e4e61; */
+}
+
+/* Main Container */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: linear-gradient(145deg, #ffffff, #e2f4ff);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+/* Intro Text */
+.container h5 {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.verify-btnn,
+.open-modal-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin: 10px 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.3s;
+}
+
+.verify-btnn:hover,
+.open-modal-btn:hover {
+  background: linear-gradient(135deg, #152a4e, #1c3d78);
+  transform: scale(1.02);
+}
+
+/* Instruction Block */
+.loan-tabless {
+  margin-top: 25px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.labels {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #2a5298;
+}
+
+.modal p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.verify-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.verify-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Message Feedback */
+.message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.message.success {
+  background-color: #e0ffe0;
+  color: #1c7a1c;
+}
+
+.message.error {
+  background-color: #ffe0e0;
+  color: #a10000;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #888;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 18px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .container h5 {
+    font-size: 15px;
+  }
+
+  .verify-btnn,
+  .open-modal-btn,
+  .verify-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .labels {
+    font-size: 14px;
+  }
+
+  .modal h2 {
+    font-size: 20px;
+  }
+
+  .modal p {
+    font-size: 14px;
+  }
+}
+.close-modal-btn {
+  position: absolute;
+  top: 1px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.2s;
+}
+
+.close-modal-btn:hover {
+  color: #ff4444;
+}
+
