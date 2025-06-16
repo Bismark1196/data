@@ -16,3 +16,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </HelmetProvider>
   </React.StrictMode>,
 );
+
+<script type="module" src="/src/main.js"></script>
+
