@@ -1,7 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+
+<>
+  <Helmet>
+    <title>Home - DATA CHAPCHAP</title>
+    <meta name="description" content="Quick, safe and easy data bundle access via DATA CHAPCHAP app" />
+    <meta property="og:title" content="DATA CHAPCHAP - Fast, Reliable Data Bundles" />
+    <meta property="og:description" content="Buy data bundles instantly with DATA CHAPCHAP. Safe, fast and convenient." />
+  </Helmet>
+
+  <div className="section">
+    {/* ...rest of your code */}
+  </div>
+</>
+
 
 const Home = ({ showToast }) => {
   const navigate = useNavigate();
